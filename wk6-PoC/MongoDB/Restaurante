@@ -1,0 +1,51 @@
+use myrestaurants
+
+db.createCollection('restaurante');
+
+db.createCollection("count");
+
+db.count.insert({_id:"restaurant_id",sequence_value:0});
+
+function getNextSequence(sequenceName){
+
+   var sequenceDocument = db.count.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+	
+   return sequenceDocument.sequence_value;
+}
+
+db.restaurante.insert({ _id:getNextSequence("restaurant_id"),
+                       name:"Restaurant Arnia",
+                       description:"Misiunea noastră este să oferim o experiență unică tuturor clienților.",
+                       type: ["bar", "fast-food", "pizza"]}
+);
+
+
+db.restaurante.insert([{_id:getNextSequence("restaurant_id"),
+                       name:"Restaurant Moara de foc",
+                       description:"Misiunea noastră este să oferim o experiență unică tuturor clienților prin atmosfera primitoare a locului.",
+                       type: ["rezervari", "cafenea", "pizza"]}
+
+]);
+
+
+db.restaurante.insert([{_id:getNextSequence("restaurant_id"),
+                       name:"Le Bistrot Francais ",
+                       description:"Bucatarie frantuzeasca fina",
+                       type: ["rezervari", "Mancare frantuzeasca", "Restaurant cu specific"]},
+                       {_id:getNextSequence("restaurant_id"),
+                       name:"Poesia ",
+                       description:"Bucatarie italiana clasica fina",
+                       type: ["rezervari", "Restaurant clasic", "pizza"]},
+                       {_id:getNextSequence("restaurant_id"),
+                       name:"Dabeef",
+                       description:"Specific multicuisine, steakhouse",
+                       type: ["Unități tip bufet", "Bar", "Braserie"]},
+                       {_id:getNextSequence("restaurant_id"),
+                       name:" ZenSushi Sarroglia ",
+                       description:"Bucatarie japoneza, sushi",
+                       type: ["Restaurant japonez", "sushi"]}
+]);

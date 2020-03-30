@@ -1,0 +1,22 @@
+use myreviews
+
+db.createCollection('reviews');
+
+db.reviews.insert({reviewer:"Popescu Maria",score:6,description:"Mediocru dar exista potential"});
+
+db.reviews.insert([{reviewer:"Lungu Catalin",score:5.5,description:"Mancarea a fost Ok dar servirea ingrozitoare"}
+,{reviewer:"Nalcea Adrian",score:9.5,description:"Excelent... desi servirea putea fi mai rapida"}
+,{reviewer:"Cristina Neculea",score:1}
+,{reviewer:"Croitoru Stefan",score:1,description:"Am asteptat juma de ora si nu am fost servit"}
+,{reviewer:"Dinu Maria",score:4,description:"Am dat nota 4 pentru următorul motiv : Nu mia placut mancarea"}
+,{reviewer:"Alina Vatu",score:10,description:"Un restaurant scump, cu o servire ireproșabilă. "}
+,{reviewer:"Valentin Porusniuc",score:3,description:"Toaleta nu a mai fost spalata de o luna"}
+,{reviewer:"Laurentiu Cristea",score:10}
+,{reviewer:"Alin Crudu",score:2,description:"Nu se merita deloc sa intrati sa mancati."}
+,{reviewer:"Ionel Cristi",score:7}
+,{reviewer:"Florin Alexandru",score:3,description:"Nu vă pierdeți timpul. Am fost de 3 ori în aceast restaurant şi de fiecare dată am fost dezamagit"}
+,{reviewer:"Nina Nestian",score:1,description:"Nu merită nicio stea.. Lipsă de bun simț!! Ospătarii sunt foarte impertinenți ca și cum ar fi restaurantul lor."}
+,{reviewer:"Cristina Sut",score:8,description:"Mâncare cu gust la preț ok!"}
+,{reviewer:"Barbu Dan",score:2,description:"Am vrut sa luam o masa in familie, dar dupa aproape o ora de asteptat, mancarea a venit...dar rece."}
+,{reviewer:"Mihai Stefan",score:10}
+]);
