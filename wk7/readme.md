@@ -1,0 +1,1 @@
+On the front-end part, the work was mostly experimental, so there's no legible, functional code to commit here.

@@ -1,0 +1,31 @@
+restaurante{
+id: generat sau incrementat secvential,
+nume: string,
+descriere: string ,
+tip: vectori string{
+bar,
+pizzerie
+},
+meniu: vectori string{
+pizza,
+mic_dejun,
+dejun,
+ciorba,
+salate,
+desert,
+sosuri
+},
+review-uri,
+rezervari: vectori de diferite tipuri(bool, string){
+este_posibil: bool,
+nr_locuri: int,
+data: data calanderistica
+},
+finante: vectori de diferite tipuri(int, string, etc){
+buget: int,
+datorii,
+profit
+}
+locatie: string
+
+}

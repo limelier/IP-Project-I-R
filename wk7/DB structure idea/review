@@ -1,0 +1,16 @@
+review{
+id: generat sau secvential,
+reviewer: vector{
+nume: string,
+statut: string,
+nr_review-uri: int
+}
+restaurant: vectori,
+nota: double,
+descriere: string,
+data: data calendaristica,
+raspunsuri: vectori{
+data,
+text
+}
+}
